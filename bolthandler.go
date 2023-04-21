@@ -18,7 +18,7 @@ var namelen = 8
 // bucket constants
 const linkIndex = "link index"
 
-//const fnameIndex = "filename index"
+// const fnameIndex = "filename index"
 const hashIndex = "hash index"
 
 // location for bolt databases. Names are random at present because

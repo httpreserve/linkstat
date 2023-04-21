@@ -100,7 +100,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "%s\n", httpreserve.VersionText())
 		os.Exit(0)
 	} else if flag.NFlag() <= 0 {
-        fmt.Fprintln(os.Stderr, "Usage:  linkstat [Optional -link] [Optional -label]")
+		fmt.Fprintln(os.Stderr, "Usage:  linkstat [Optional -link] [Optional -label]")
 		fmt.Fprintln(os.Stderr, "                 [Optional -list] [Optional -json]")
 		fmt.Fprintln(os.Stderr, "                                  [Optional -bolt]")
 		fmt.Fprintln(os.Stderr, "                                  [Optional -csv]")
