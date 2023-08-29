@@ -1,6 +1,6 @@
 <div>
 <p align="center">
-<img id="logo" src="https://github.com/httpreserve/httpreserve/raw/master/src/images/httpreserve-logo.png" alt="httpreserve"/>
+<img height="300px" width="300px" id="logo" src="https://github.com/httpreserve/httpreserve/raw/main/src/images/httpreserve-logo.png" alt="httpreserve"/>
 </p>
 </div>
 
@@ -90,24 +90,30 @@ output:
 ```json
 {
    "FileName": "GitHub",
-   "AnalysisVersionNumber": "0.0.9",
-   "AnalysisVersionText": "exponentialDK-httpreserve/0.0.9",
+   "AnalysisVersionNumber": "0.0.15",
+   "AnalysisVersionText": "exponentialDK-httpreserve/0.0.15",
    "SimpleRequestVersion": "httpreserve-simplerequest/0.0.4",
    "Link": "https://github.com/",
-   "Title": "the world’s leading software development platform · github",
+   "Title": "github: let’s build from here · github",
    "ContentType": "text/html; charset=utf-8",
    "ResponseCode": 200,
    "ResponseText": "OK",
+   "SourceURL": "https://github.com/",
    "ScreenShot": "snapshots are not currently enabled",
-   "InternetArchiveLinkLatest": "http://web.archive.org/web/20190319223453/https://github.com/",
    "InternetArchiveLinkEarliest": "http://web.archive.org/web/20080514210148/http://github.com/",
+   "InternetArchiveEarliestDate": "2008-05-14 21:01:48 +0000 UTC",
+   "InternetArchiveLinkLatest": "http://web.archive.org/web/20230829062855/https://github.com/",
+   "InternetArchiveLatestDate": "2023-08-29 06:28:55 +0000 UTC",
    "InternetArchiveSaveLink": "http://web.archive.org/save/https://github.com/",
    "InternetArchiveResponseCode": 302,
    "InternetArchiveResponseText": "Found",
+   "RobustLinkEarliest": "<a href='http://web.archive.org/web/20080514210148/http://github.com/' data-originalurl='https://github.com/' data-versiondate='2008-05-14'>HTTPreserve Robust Link - simply replace this text!!</a>",
+   "RobustLinkLatest": "<a href='http://web.archive.org/web/20230829062855/https://github.com/' data-originalurl='https://github.com/' data-versiondate='2023-08-29'>HTTPreserve Robust Link - simply replace this text!!</a>",
+   "PWID": "urn:pwid:archive.org:2023-08-29T06:28:55Z:page:https://github.com/",
    "Archived": true,
    "Error": false,
    "ErrorMessage": "",
-   "StatsCreationTime": "4.295493892s"
+   "StatsCreationTime": "7.070152149s"
 }
 ```
 
