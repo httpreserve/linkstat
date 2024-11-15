@@ -3,10 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/httpreserve/httpreserve"
 	"log"
 	"os"
 	"time"
+
+	"github.com/httpreserve/httpreserve"
 )
 
 var (

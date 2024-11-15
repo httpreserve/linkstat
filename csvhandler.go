@@ -3,9 +3,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/httpreserve/httpreserve"
 	"os"
 	"strings"
+
+	"github.com/httpreserve/httpreserve"
 )
 
 var csvHeader = []string{"id", "filename", "link", "response code", "response text", "title",
