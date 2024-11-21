@@ -19,3 +19,12 @@ all-checks:
 # Compile for all platforms
 compile-all:
   ./distil.sh
+
+# Setup linting
+setup:
+  go install golang.org/x/tools/cmd/goimports@latest
+  go install honnef.co/go/tools/cmd/staticcheck@latest
+
+# Fix imports
+fix-imports:
+  goimports -w .
