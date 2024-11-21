@@ -15,3 +15,7 @@ linting:
 # Run pre-commit
 all-checks:
   pre-commit run --all-files
+
+# Compile for all platforms
+compile-all:
+  ./distil.sh

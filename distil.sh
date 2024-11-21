@@ -1,10 +1,10 @@
-  GNU nano 5.4                                                                     distil.sh
 #!/usr/bin/env bash
 set -eux
 
 MOONSHINE="linkstat"
-VERSION="${MOONSHINE}-v0.0.3"
 DIR="release"
+VERSION="${MOONSHINE}"
+rm -rf "$DIR"
 mkdir -p "$DIR"
 export GOOS=windows
 export GOARCH=386
