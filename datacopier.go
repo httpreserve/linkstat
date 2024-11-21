@@ -48,7 +48,7 @@ func pldatacopy(copyfrom *int, copyto *int, list []processLog) []processLog {
 // Thread safe data copy from one slice to another
 // This method allows us to specify a length which may be safer for
 // us in the long run...
-func pldatacopylen(copyfrom *int, copyto *int, list []processLog, copylen int) []processLog {
+func pldatacopylen(copyfrom *int, copyto *int, list []processLog) []processLog {
 	//protect memory by copying only what we know we've got
 	*copyto = *copyto + 1
 	if *copyto > 0 && *copyto > *copyfrom && *copyto <= len(list) {
