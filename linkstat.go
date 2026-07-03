@@ -114,5 +114,7 @@ func main() {
 		flag.Usage()
 		os.Exit(0)
 	}
+	startTime := time.Now()
 	linkstat()
+	log.Println("data retrieved in:", time.Since(startTime))
 }
