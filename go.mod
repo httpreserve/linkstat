@@ -1,9 +1,6 @@
 module github.com/httpreserve/linkstat
 
 go 1.25.0
-
-replace github.com/httpreserve/httpreserve => /home/ross-spencer/git/httpreserve/httpreserve
-
 require (
 	github.com/httpreserve/httpreserve v0.0.18
 	github.com/httpreserve/wayback v0.1.0
