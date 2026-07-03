@@ -28,3 +28,5 @@ go build
 mv "$MOONSHINE" "${DIR}/${VERSION}"-darwinAmd64
 export GOOS=
 export GOARCH=
+cd release/
+md5sum * > checksums.md5
