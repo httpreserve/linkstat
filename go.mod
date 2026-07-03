@@ -5,7 +5,7 @@ go 1.25.0
 replace github.com/httpreserve/httpreserve => /home/ross-spencer/git/httpreserve/httpreserve
 
 require (
-	github.com/httpreserve/httpreserve v0.0.17
+	github.com/httpreserve/httpreserve v0.0.18
 	github.com/httpreserve/wayback v0.1.0
 	github.com/kval-access-language/kval-bbolt v0.0.0-20230420120231-8c2fbba90834
 	github.com/speps/go-hashids v2.0.0+incompatible
