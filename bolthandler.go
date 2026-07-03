@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"os"
 	"time"
@@ -62,7 +61,7 @@ func makeIDIndex(kb kval.Kvalboltdb, lmap map[string]interface{}) {
 	for k, v := range lmap {
 		_, err := kval.Query(kb, "INS "+convertInterface(lmap["response code"])+">>"+convertInterface(lmap["link"])+" >>>> "+k+" :: "+convertInterface(v))
 		if err != nil {
-			fmt.Fprintln(os.Stderr, err)
+			log.Println(err)
 		}
 	}
 }
@@ -73,7 +72,7 @@ func makeBoltDir() {
 	if _, err := os.Stat(boltdir); os.IsNotExist(err) {
 		err := os.Mkdir(boltdir, 0700)
 		if err != nil {
-			fmt.Fprintln(os.Stderr, err)
+			log.Println(err)
 			os.Exit(1)
 		}
 	}
@@ -128,7 +127,7 @@ func openKVALBolt() {
 	boltoutput = boltdir + "HP_" + boltname + ".bolt"
 	kb, err = kval.Connect(boltoutput)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error opening bolt database: %+v\n", err)
+		log.Printf("error opening bolt database: %+v\n", err)
 		os.Exit(1)
 	}
 }
@@ -147,7 +146,7 @@ func boltdbHandler(js string) {
 
 	err := json.Unmarshal([]byte(js), &ls)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "problem unmarshalling data.", err)
+		log.Println("problem unmarshalling data:", err)
 	}
 
 	var add = true

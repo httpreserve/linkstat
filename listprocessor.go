@@ -2,7 +2,7 @@ package main
 
 import (
 	"bufio"
-	"fmt"
+	"log"
 	"os"
 	"strings"
 	"sync"
@@ -31,7 +31,7 @@ func listHandler(outputHandler func(js string)) {
 		// Read all the lines in a file...
 		file, err := os.Open(list)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error with scanner: %s\n", err.Error())
+			log.Printf("error with scanner: %s\n", err.Error())
 		}
 		defer file.Close()
 
@@ -48,7 +48,7 @@ func listHandler(outputHandler func(js string)) {
 				split = strings.Split(scanner.Text(), ",")
 			}
 			if len(split) != 2 {
-				fmt.Fprintf(os.Stderr, "ignoring: issue reading string from file: %s\n", scanner.Text())
+				log.Printf("ignoring: issue reading string from file: %s\n", scanner.Text())
 			} else {
 				l[strings.Trim(split[1], " ")] = strings.Trim(split[0], " ")
 				link <- l
@@ -56,7 +56,7 @@ func listHandler(outputHandler func(js string)) {
 		}
 
 		if err := scanner.Err(); err != nil {
-			fmt.Fprintf(os.Stderr, "Error with scanner: %s\n", scanner.Text())
+			log.Printf("error with scanner: %s\n", scanner.Text())
 		}
 		close(link)
 	}()

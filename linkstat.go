@@ -46,6 +46,7 @@ func init() {
 }
 
 func getJSONFromLocal(link string, label string) string {
+
 	ls, err := httpreserve.GenerateLinkStats(link, label, true)
 	if err != nil {
 		log.Println("Error retrieving linkstat JSON may be incorrect:", err)
@@ -61,15 +62,15 @@ func getJSONFromLocal(link string, label string) string {
 
 func getLocalLink() {
 	js := getJSONFromLocal(link, label)
-	fmt.Fprintln(os.Stderr, "Using httpreserve libs to retrieve data.")
+	log.Println("using httpreserve libs to retrieve data")
 	fmt.Fprintf(os.Stdout, "%s", js)
 }
 
-var htmcomplete bool
-var starttime time.Time
-var elapsedtime time.Duration
-
-func programrunner() {
+func linkstat() {
+	if link != "" {
+		getLocalLink()
+		return
+	}
 	if jsonout {
 		fmt.Fprintf(os.Stdout, "%s", outputJSONHeader())
 		listHandler(jsonHandler)
@@ -89,12 +90,10 @@ func programrunner() {
 		listHandler(boltdbHandler)
 		return
 	}
-	if link != "" {
-		getLocalLink()
-	}
 }
 
 func main() {
+	setLog("linkstat", true)
 	flag.Parse()
 	if vers {
 		fmt.Fprintf(os.Stderr, "%s\n", getVersion())
@@ -115,5 +114,5 @@ func main() {
 		flag.Usage()
 		os.Exit(0)
 	}
-	programrunner()
+	linkstat()
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"strings"
 
@@ -52,7 +53,7 @@ func csvHandler(js string) {
 	var ls httpreserve.LinkStats
 	err := json.Unmarshal([]byte(js), &ls)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "problem unmarshalling data.", err)
+		log.Println("problem unmarshalling data:", err)
 	}
 
 	// retrieve a map from the structure and write it out to the CSV
