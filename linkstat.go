@@ -62,7 +62,7 @@ func getJSONFromLocal(link string, label string) string {
 
 	}
 
-	ls, err := httpreserve.GenerateLinkStats(link, label, true)
+	ls, err := httpreserve.GenerateLinkStats(link, label, false)
 	if err != nil {
 		log.Println("Error retrieving linkstat JSON may be incorrect:", err)
 	}
@@ -76,8 +76,8 @@ func getJSONFromLocal(link string, label string) string {
 }
 
 func getLocalLink() {
-	js := getJSONFromLocal(link, label)
 	log.Println("using httpreserve libs to retrieve data")
+	js := getJSONFromLocal(link, label)
 	fmt.Fprintf(os.Stdout, "%s", js)
 }
 
