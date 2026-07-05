@@ -66,6 +66,7 @@ func getJSONFromLocal(link string, label string) string {
 	if err != nil {
 		log.Println("Error retrieving linkstat JSON may be incorrect:", err)
 	}
+	ls.ScreenShot = ""
 	js := httpreserve.MakeLinkStatsJSON(ls)
 
 	// throttle requests to the server somehow...

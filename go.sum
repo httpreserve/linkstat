@@ -15,6 +15,8 @@ github.com/httpreserve/httpreserve v0.0.19 h1:mj+BO8YUZm0nhw+AW47ZI3XkIXlndsOVCF
 github.com/httpreserve/httpreserve v0.0.19/go.mod h1:ztcjTWlcumJRZ8Irm/Yf5Og92389Tbi+xLPPkj7VbGc=
 github.com/httpreserve/httpreserve v0.0.20 h1:CfODnSt7Czs6SIe3ZENGIbAVBm2S0uAMTFz6cB7Eq9M=
 github.com/httpreserve/httpreserve v0.0.20/go.mod h1:ztcjTWlcumJRZ8Irm/Yf5Og92389Tbi+xLPPkj7VbGc=
+github.com/httpreserve/httpreserve v0.0.21 h1:htOQxbELeJGKXw8taotoa+LV0ecT5jDrhiDb33Mk37w=
+github.com/httpreserve/httpreserve v0.0.21/go.mod h1:ztcjTWlcumJRZ8Irm/Yf5Og92389Tbi+xLPPkj7VbGc=
 github.com/httpreserve/phantomjsscreenshot v0.0.0-20180422150311-c763ac7abadc h1:QSH5I52X/qdPuJcWK4pymLQWHc+Pp2IEvvAqLE7Xhk4=
 github.com/httpreserve/phantomjsscreenshot v0.0.0-20180422150311-c763ac7abadc/go.mod h1:5buv8evqeUmXcW01Gmdjgqs5ttSySQXQOFiRgCAMP+U=
 github.com/httpreserve/simplerequest v0.0.0-20170904111322-6f325573aa95 h1:c6ci9fUN0o3SB1kI6N9Nn8L+/pAlrCzvJhXOKprSS9g=
